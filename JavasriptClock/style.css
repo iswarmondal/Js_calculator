@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#canvas {
+    background-color: rgb(255, 237, 204);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container {
+    background-image: linear-gradient(-45deg,rgb(255, 0, 255), rgb(255, 0, 0), rgb(121, 163, 253),rgb(231, 243, 61));
+    height: 590px;
+    width: 310px;
+    align-self: center;
+    border: solid 7px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    box-shadow: 1px 1px 15px black;
+    animation-name: gradient;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    background-size: 300% 300%;
+    overflow: hidden;
+}
+
+#noch {
+    height: 30px;
+    width: 173px;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+#speaker {
+    height: 4px;
+    width: 80px;
+    background-color: rgb(83, 83, 83);
+    margin-top: 6px;
+    border-radius: 30px;
+}
+
+#time {
+    height: 60px;
+    width: 200px;
+    align-self: center;
+    margin-top: 70px;
+    margin-left: -15px;
+}
+
+#showinTime {
+    font-size: 50px;
+    color: white;
+    font-family: sans-serif;
+}
+
+#date{
+    height: 30px;
+    width: 300px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.arrows{
+    align-self: center;
+    justify-self: flex-end;
+    border: solid rgb(255, 255, 255);
+    border-width: 3px 3px 0 0;
+    border-radius: 3px;
+    height: 13px;
+    width: 13px;
+    margin-top: 350px;
+    animation-name: swipeUp;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* keyframes */
+@keyframes swipeUp {
+    0%{transform: translateY(1px) rotate(-45deg);}
+    50%{transform: translateY(-13px) rotate(-45deg);}
+    100%{transform: translateY(0px) rotate(-45deg);}
+}
+
+@keyframes gradient {
+    0%{background-position: 0% 50%;}
+    50%{background-position: 50% 50%;}
+    100%{background-position: 0% 50%;}
+}
+
+@keyframes unlockAnimation {
+    0%{background-position: top;}
+    50%{background-position: center;}
+    100%{background-position: bottom;}
+}
+
+@keyframes zoomOutEffect {
+    from{background-size: 300% 300%;}
+    to{background-size: 100% 100%;}
+}
